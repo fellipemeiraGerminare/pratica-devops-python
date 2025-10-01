@@ -26,7 +26,7 @@ jobs:
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/pratica-devops-python
           tags: |
-            type=raw,value=latest,pattern={{version}}
+            type=raw,value=latest:{{version}}
             type=sha
 
       - name: Build and push Docker image
